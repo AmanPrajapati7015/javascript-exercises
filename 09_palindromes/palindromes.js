@@ -1,11 +1,6 @@
 const palindromes = function (input) {
-    let toCheck = input.toLowerCase();
-    toCheck = toCheck.replaceAll("!", '');
-    toCheck = toCheck.replaceAll(".", '');
-    toCheck = toCheck.replaceAll(",", '');
-    toCheck = toCheck.replaceAll(' ','');
-
-
+    let toCheck = input.toLowerCase().replace(/[^a-z0-9]/g, "");
+    
     let len = toCheck.length;
     let till = Math.floor(len/2);
     let isPalindrome = true;
